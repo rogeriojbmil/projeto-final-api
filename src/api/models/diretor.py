@@ -1,11 +1,12 @@
 from .funcionario_base import Funcionario
+from src.config import settings
 
 class Diretor(Funcionario):
-    
+   
     @property
     def valor_hora(self) -> float:
-        return 200.0
-    
+        return settings.VALOR_HORA_DIRETOR
+   
     @property
     def percentual_bonus(self) -> float:
-        return 10.0
+        return settings.BONUS_DIRETOR
