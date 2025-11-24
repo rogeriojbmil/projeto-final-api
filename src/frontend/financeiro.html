@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+    <title>Módulo Financeiro - Sálario</title>
+
+</head>
+<body>
+    <div id="divEntrada" style='border: solid; border-width: 1px;  width: 40%; margin: 50px; '>
+        <h1 align="center">Cálculo do Salário</h1>
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <span> Cargo: </span>
+                </td>
+                <td colspan="3">
+                    <select id='txtCargo'>
+                        <option value=''></option>
+                        <option value='diretor'>Diretor</option>
+                        <option value='gerente'>Gerente</option>
+                        <option value='empregado'>Empregado</option>
+                        <option value='estagiario'>Estagiário</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span> Horas Trabalhadas: </span>
+                </td>
+                <td colspan="3">
+        
+                    <input type="text" id='txtHorasTrabalhadas' maxlength="4">
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <span>Nome: </span>
+                </td>
+        
+                <td colspan="3">
+                    <input type="text" id='txtNome' size="50" maxlength="100">
+                </td>
+            </tr>
+            <tr style="height: 120px; vertical-align: middle;">
+                <td align="center">
+                    <button id="calcular-btn" onclick="fCalcular('GERAL')">Cálculo Geral</button>
+                </td>
+                <td align="center">
+                    <button id="calcularBonus-btn" onclick="fCalcular('BONUS')">Cálculo do Bônus</button>
+                </td>
+                <td align="center">
+                    <button id="calcularFerias-btn" onclick="fCalcular('FERIAS')">Cálculo das Férias</button>
+                </td>
+                <td align="center">
+                    <button id="calcular13-btn" onclick="fCalcular('13')">Cálculo do Décimo Terceiro</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="divResposta" style='border: solid; border-width: 1px; display: none; width: 40%; margin: 50px;  ' >
+        <table  align="center" border="0">
+            <tr id="trSalarioBase">
+                <td>
+                    <span>Salário Base: </span>
+                </td>
+                <td>
+                    <span id='spnSalarioBase' style="font-weight: bold;"></span>
+                </td>
+            </tr>
+            <tr  id="trBonus">
+                <td>
+                    <span>Bônus: </span>
+                </td>
+                <td>
+                    <span id='spnBonus' style="font-weight: bold;"></span>
+                </td>
+            </tr>
+            <tr  id="trSalarioTotal">
+                <td>
+                    <span>Salário Total: </span>
+                </td>
+                <td>
+                    <span id='spnSalarioTotal' style="font-weight: bold;"></span>
+                </td>
+            </tr>
+            <tr  id="trFerias">
+                <td>
+                    <span>Férias: </span>
+                </td>
+                <td>
+                    <span id='spnFerias' style="font-weight: bold;"></span>
+                </td>
+            </tr>
+            <tr  id="tr13">
+                <td>
+                    <span>13º Salário: </span>
+                </td>
+                <td>
+                    <span id='spn13' style="font-weight: bold;"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="resultado" style="color: red; width: 40%; margin: 50px;text-align: center; "></div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
